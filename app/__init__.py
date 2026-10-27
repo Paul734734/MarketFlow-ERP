@@ -27,4 +27,8 @@ def create_app(config_name=None):
 
     from app import models  # noqa: F401
 
+    from app.cli import register_cli
+
+    register_cli(app)
+
     return app
